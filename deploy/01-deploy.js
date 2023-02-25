@@ -31,6 +31,8 @@ module.exports = async ({ getNamedAccounts, deployments }) => {
     waitConfirmations: network.config.blockConfirmations || 1,
   });
 
+  //verifying the contract
+
   if (!developmentChains.includes(network.name)) {
     await verify(fundMeContract.address, [ethUsdPriceFeedAddress]);
   }

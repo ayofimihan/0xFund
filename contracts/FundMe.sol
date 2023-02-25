@@ -6,7 +6,7 @@ import "./PriceConverter.sol";
 //set a minimum funding value
 
 //custom errors are stated outside of the contracts
-error Brokie();
+error FundMe__Brokie();
 
 contract FundMe {
     using PriceConverter for uint256;
@@ -24,6 +24,14 @@ contract FundMe {
     constructor(address priceFeedAddress) {
         i_owner = msg.sender;
         priceFeed = AggregatorV3Interface(priceFeedAddress);
+    }
+
+      receive() external payable {
+        fund();
+    }
+
+    fallback() external payable {
+        fund();
     }
 
     //a modi fier that checks to make sure the person about to call a function is the owner of the contract
@@ -57,15 +65,9 @@ contract FundMe {
         (bool success, ) = payable(_to).call{value: address(this).balance}("");
         //revert is used here to save gas and error brokie is declared already outside of the contract
         if (!success) {
-            revert Brokie();
+            revert FundMe__Brokie();
         }
     }
 
-    receive() external payable {
-        fund();
-    }
-
-    fallback() external payable {
-        fund();
-    }
+  
 }
