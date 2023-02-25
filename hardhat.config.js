@@ -17,7 +17,7 @@ module.exports = {
       url: goerliRPC,
       chainId: 5,
       accounts: [privateKey],
-      blockConfirmations: 4
+      blockConfirmations: 4,
     },
   },
   gasReporter: {
