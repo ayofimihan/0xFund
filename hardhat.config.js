@@ -24,6 +24,7 @@ module.exports = {
     enabled: true,
     currency: "NGN",
     coinmarketcap: coinmarketcapKey,
+    outputFile: "gasReport.txt",
   },
   etherscan: {
     apiKey: etherscanKey,

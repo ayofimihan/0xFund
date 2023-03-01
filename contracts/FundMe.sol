@@ -69,5 +69,24 @@ contract FundMe {
         }
     }
 
+    // function cheaperWithdraw(address _to) public onlyOwner{
+    //                 address[] memory m_funders = funders;
+
+    //         //mappings cant be in memory
+    //         for(
+    //         uint256 funderIndex = 0;
+    //         funderIndex < m_funders.length;
+    //         funderIndex++){
+    //             address funder = funders[funderIndex];
+    //             funderToAmount [funder] = 0;
+    //         }
+
+    //         (bool success,) = payable(_to).call{value: address(this).balance}("");
+    //         require(success);
+
+        
+
+    // }
+
   
 }
