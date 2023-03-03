@@ -1,12 +1,12 @@
 {
   "name": "0xfundme",
   "version": "1.0.0",
+  "author" : "0x419",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
   "license": "ISC",
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^2.0.1",
