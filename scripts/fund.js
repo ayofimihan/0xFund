@@ -7,7 +7,7 @@ const main = async () => {
   const txn = await fundMe.fund({ value: sendValue });
   console.log("funding contract...");
   await txn.wait(1);
-  console.log("Funded!!");
+  console.log("Funded!!!");
 };
 
 main()
